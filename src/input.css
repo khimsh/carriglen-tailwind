@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.swiper:hover .swiper-button {
+    opacity: 1;
+}
+
+.swiper-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+    opacity: 0;
+    transition: all 0.25s ease-in-out;
+
+    & button {
+        width: 40px;
+        height: 40px;
+        display: grid;
+        place-content: center;
+        background-color: hsl(0 0% 0% / .5);
+        border-radius: 100vw;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            background-color: hsl(0 0% 0% / .9);
+        }
+    }
+}
+
+.swiper-prev {
+    left: 10px;
+}
+
+.swiper-next {
+    right: 10px;
+}
