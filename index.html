@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&family=Niconne&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;900&family=Niconne&display=swap"
         rel="stylesheet">
 </head>
 
@@ -23,7 +23,7 @@
     <div class="absolute top-0 left-0 right-0 z-20">
         <!-- topbar -->
         <div role="topbar" class="bg-red-800 py-2">
-            <div class="container">
+            <div class="container px-3">
                 <div class="text-white text-lg font-[montserrat]">
                     Phone:
                     <a href="tel:+040440627">040440627</a>
@@ -35,18 +35,30 @@
         <!-- end topbar -->
 
         <!-- header -->
-        <header class="py-6 bg-red-950/50">
-            <div class="container flex justify-between items-center text-white">
+        <header class="py-6 bg-red-950/50 ">
+            <div class="container px-3 flex justify-between items-center text-white">
                 <!-- logo -->
-                <a href="/" role="logo" class="flex flex-col">
-                    <span class="text-4xl">Carriglen B & B</span>
-                    <span class="text-base tracking-[1px]">RELAX AND EXPLORE IN STYLE</span>
+                <a href="/" role="logo" class="flex flex-col gap-1 font-montserrat">
+                    <span class="text-2xl font-extrabold tracking-[1px]">Carriglen B & B</span>
+                    <span class="text-[10px] tracking-[2px] font-bold">RELAX AND EXPLORE IN
+                        STYLE</span>
                 </a>
                 <!-- end logo -->
 
                 <!-- navigation -->
-                <nav class="hidden xl:block">
-                    <ul class="flex gap-6 font-[montserrat]">
+                <nav
+                    class="hidden xl:block fixed top-0 right-0 bottom-0 bg-slate-600 content-center xl:bg-transparent xl:relative">
+                    <!-- TODO: nav should get display grid when clicked on mobile  -->
+                    <button class="absolute top-3 right-3 xl:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" class="w-6 h-6 stroke-white">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+
+                    <ul
+                        class="flex flex-col items-center justify-center xl:flex-row px-10 xl:px-0 gap-6 font-montserrat">
                         <li><a class="text-base uppercase font-medium" href="#">home</a></li>
                         <li><a class="text-base uppercase font-medium" href="#">pricing</a></li>
                         <li><a class="text-base uppercase font-medium" href="#">breakfast</a></li>
@@ -132,7 +144,7 @@
                             before:bg-slate-400/40
                             before:z-[-1] isolate">
                             <div
-                                class="h-full grid gap-5 place-content-center text-center text-white font-montserrat">
+                                class="h-full grid gap-7 place-content-center text-center text-white font-montserrat">
                                 <div class="flex flex-col items-center gap-6">
                                     <span class="font-bold text-7xl uppercase">contact aine</span>
                                     <span
@@ -140,7 +152,7 @@
                                         today
                                     </span>
                                 </div>
-                                <p class="max-w-md mx-auto text-lg text-left tracking-wide">
+                                <p class="max-w-xl mx-auto text-lg text-left tracking-wide">
                                     Carriglen B&B is
                                     located 5
                                     minutes walk
@@ -149,7 +161,7 @@
                                     Site Map on Contact Us page or
                                     call Aine for directions</p>
 
-                                <ul class="mx-auto text-lg text-left tracking-wide grid gap-3">
+                                <ul class="mx-auto text-lg text-left tracking-wide grid gap-2">
                                     <li class="flex gap-2">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none"
                                             viewBox="0 0 24 24" stroke-width="1.5"
@@ -236,7 +248,7 @@
         </section>
 
         <section class="my-14">
-            <div class="container">
+            <div class="container px-3">
                 <h2 class="text-center text-4xl mb-6 font-niconne">Welcome To Carriglen</h2>
 
                 <p class="max-w-5xl mx-auto font-montserrat text-sm leading-6">
@@ -275,87 +287,97 @@
         </section>
 
         <section>
-            <div class="max-w-5xl mx-auto">
-                <div class="grid gap-16">
-                    <article class="flex gap-6">
-                        <figure class="w-[50%] h-[292px] flex-shrink-0">
-                            <img class="w-full h-full object-cover rounded-md shadow-md"
-                                src="https://carriglen.com/wp-content/uploads/2021/12/Douible-Single-At-Carriglen.jpg"
-                                alt="">
-                        </figure>
+            <div class="container px-3">
+                <div class="max-w-5xl mx-auto">
+                    <div class="grid gap-16">
+                        <article class="flex gap-6">
+                            <figure
+                                class="w-[50%] h-[292px] flex-shrink-0 overflow-hidden rounded-md shadow-md">
+                                <img class="w-full h-full object-cover"
+                                    src="https://carriglen.com/wp-content/uploads/2021/12/Douible-Single-At-Carriglen.jpg"
+                                    alt="">
+                            </figure>
 
-                        <div class="grid content-center gap-7">
-                            <h3 class="font-niconne text-3xl capitalize text-center">comfortable
-                                bedrooms</h3>
+                            <div class="grid content-center gap-7">
+                                <h3 class="font-niconne text-3xl capitalize text-center">comfortable
+                                    bedrooms</h3>
 
-                            <p>
-                                Each ensuite bedroom is set to high standards to ensure our guests
-                                enjoy
-                                a
-                                comfortable experience at
-                                Carriglen B&B
-                            </p>
+                                <p>
+                                    Each ensuite bedroom is set to high standards to ensure our
+                                    guests
+                                    enjoy
+                                    a
+                                    comfortable experience at
+                                    Carriglen B&B
+                                </p>
 
-                            <a href="#"
-                                class="font-semibold text-center font-montserrat capitalize border border-x-0 py-2 border-green-600 text-green-600">book
-                                your
-                                stay</a>
-                        </div>
-                    </article>
+                                <a href="#"
+                                    class="font-semibold text-center font-montserrat capitalize border border-x-0 py-2 border-green-600 text-green-600">book
+                                    your
+                                    stay</a>
+                            </div>
+                        </article>
 
-                    <article class="flex flex-row-reverse gap-6">
-                        <figure class="w-[50%] h-[292px] flex-shrink-0 rounded-md shadow-md">
-                            <img class="w-full h-full object-cover"
-                                src="https://carriglen.com/wp-content/uploads/2021/12/Breakfast-at-Carrigleen-Bed-and-Breakfast-Ashford-Co-Wicklow-590x332.jpg"
-                                alt="">
-                        </figure>
+                        <article class="flex flex-row-reverse gap-6">
+                            <figure
+                                class="w-[50%] h-[292px] flex-shrink-0 rounded-md shadow-md overflow-hidden">
+                                <img class="w-full h-full object-cover"
+                                    src="https://carriglen.com/wp-content/uploads/2021/12/Breakfast-at-Carrigleen-Bed-and-Breakfast-Ashford-Co-Wicklow-590x332.jpg"
+                                    alt="">
+                            </figure>
 
-                        <div class="grid content-center gap-7">
-                            <h3 class="font-niconne text-3xl capitalize text-center">breakfast</h3>
+                            <div class="grid content-center gap-7">
+                                <h3 class="font-niconne text-3xl capitalize text-center">breakfast
+                                </h3>
 
-                            <p>
-                                Enjoy the fresh and carefully cooked Irish Breakfast or choose from
-                                a
-                                variety of Continental
-                                Breakfast
-                            </p>
+                                <p>
+                                    Enjoy the fresh and carefully cooked Irish Breakfast or choose
+                                    from
+                                    a
+                                    variety of Continental
+                                    Breakfast
+                                </p>
 
-                            <a href="#"
-                                class="font-semibold text-center font-montserrat capitalize border border-x-0 py-2 border-green-600 text-green-600">see
-                                breakfast menu</a>
-                        </div>
-                    </article>
+                                <a href="#"
+                                    class="font-semibold text-center font-montserrat capitalize border border-x-0 py-2 border-green-600 text-green-600">see
+                                    breakfast menu</a>
+                            </div>
+                        </article>
 
-                    <article class="flex gap-6">
-                        <figure class="w-[50%] h-[292px] flex-shrink-0">
-                            <img class="w-full h-full object-cover rounded-md shadow-md"
-                                src="https://carriglen.com/wp-content/uploads/2021/12/Bed-and-Breakfast-Near-Glendelough-Co-Wicklow-590x332.jpg"
-                                alt="">
-                        </figure>
+                        <article class="flex gap-6">
+                            <figure
+                                class="w-[50%] h-[292px] flex-shrink-0 overflow-hidden rounded-md shadow-md">
+                                <img class="w-full h-full object-cover"
+                                    src="https://carriglen.com/wp-content/uploads/2021/12/Bed-and-Breakfast-Near-Glendelough-Co-Wicklow-590x332.jpg"
+                                    alt="">
+                            </figure>
 
-                        <div class="grid content-center gap-7">
-                            <h3 class="font-niconne text-3xl capitalize text-center">wicklow sight
-                                scenery</h3>
+                            <div class="grid content-center gap-7">
+                                <h3 class="font-niconne text-3xl capitalize text-center">wicklow
+                                    sight
+                                    scenery</h3>
 
-                            <p>
-                                Carriglen is situated in the centre of the garden of Ireland where
-                                choices
-                                of sight scenery are
-                                limitless.
-                            </p>
+                                <p>
+                                    Carriglen is situated in the centre of the garden of Ireland
+                                    where
+                                    choices
+                                    of sight scenery are
+                                    limitless.
+                                </p>
 
-                            <a href="#"
-                                class="font-semibold text-center font-montserrat capitalize border border-x-0 py-2 border-green-600 text-green-600">see
-                                sight scenery page</a>
-                        </div>
-                    </article>
+                                <a href="#"
+                                    class="font-semibold text-center font-montserrat capitalize border border-x-0 py-2 border-green-600 text-green-600">see
+                                    sight scenery page</a>
+                            </div>
+                        </article>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
     <footer class="mt-16">
-        <nav role="footer navigation" class="bg-black">
+        <nav role="footer navigation" class="bg-black px-3">
             <ul class="text-white flex gap-6 justify-center capitalize py-6 font-montserrat">
                 <li><a href="#">about us</a></li>
                 <li><a href="#">testimonials</a></li>
@@ -364,7 +386,7 @@
             </ul>
         </nav>
 
-        <div class="text-center py-8 font-montserrat font-light text-sm">
+        <div class="text-center py-8 font-montserrat font-light text-sm px-3">
             Copyright ©2021 By Lir. All Rights Reserved
         </div>
     </footer>
